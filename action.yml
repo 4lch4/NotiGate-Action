@@ -1,0 +1,18 @@
+name: 'Send NotiGate Payload'
+description: 'Send a payload to the NotiGate API.'
+inputs:
+  webhook-url:
+    description: 'The URL of the webhook to send the payload to, either this or webhook-id and webhook-key must be provided.'
+    required: false
+  webhook-id:
+    description: 'The ID of the webhook to send the payload to, webhook-key must also be provided with this value.'
+    required: false
+  webhook-key:
+    description: 'The key to use for authenticating webhook requests.'
+    required: false
+outputs:
+  response:
+    description: 'The response from the webhook.'
+runs:
+  using: 'node20'
+  main: 'index.js'

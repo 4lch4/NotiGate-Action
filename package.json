@@ -1,0 +1,50 @@
+{
+  "name": "notigate-action",
+  "displayName": "NotiGate Action",
+  "version": "0.0.0",
+  "description": "A GitHub action for interacting with NotiGate.",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/4lch4/NotiGate-Action",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc && tsc-alias",
+    "pretty": "prettier --write .",
+    "lint": "prettier -c .",
+    "test": "echo 'There are currently no tests available.'",
+    "scan": "snyk monitor && snyk code test"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "NotiGate-Action"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/4lch4/NotiGate-Action.git"
+  },
+  "author": {
+    "name": "4lch4",
+    "email": "hey@4lch4.email",
+    "url": "https://4lch4.com"
+  },
+  "bugs": {
+    "email": "bugs@4lch4.email",
+    "url": "https://github.com/4lch4/NotiGate-Action/issues"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^5.1.1",
+    "axios": "^1.5.1"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.0.0"
+  }
+}
